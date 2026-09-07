@@ -14,6 +14,7 @@ header{
     background-image: url("Nimetu.png");
     background-repeat: no-repeat;
     background-position: 10px center;
+    border-radius: 10px;
 }
 
 footer{
@@ -43,6 +44,7 @@ nav ul{
     flex-wrap: wrap;
     justify-content: center;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 nav ul li{
@@ -75,8 +77,9 @@ main {
     margin-bottom: 15px;
 }
 
-section#kast1, img{
+section#kast1{
     border: 1px solid black;
+    background-color: lightblue;
     width: 25%;
     margin: 5px;
     padding: 1%;
@@ -84,9 +87,10 @@ section#kast1, img{
     text-align: center;
 }
 
-section#kast2, img{
+section#kast2{
     border: 3px dotted black;
     width: 25%;
+    background-color: lightblue;
     margin: 5px;
     padding: 1%;
     border-radius: 10px 40px 10px 40px;
@@ -95,9 +99,37 @@ section#kast2, img{
 section#kast3{
     border: 2px dashed black;
     width: 25%;
+    background-color: lightblue;
     margin: 5px;
     padding: 1%;
     border-radius: 10px 40px 10px 40px;
     text-align: center;
 }
 
+section#pildigalerii{
+    width: 500px;
+    background-color: lightgreen;
+}
+
+section#video{
+    width: 470px;
+    background-color: lightblue;
+}
+
+section#kaart{
+    width: 580px;
+    background-color: lightcoral;
+}
+
+section#muusika{
+    width: 420px;
+    height: 380px;
+    background-color: lightsalmon;
+}
+
+
+#suurkast {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
