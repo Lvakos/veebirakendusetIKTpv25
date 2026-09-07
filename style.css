@@ -1,0 +1,103 @@
+h1{
+    font-size: larger;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: blue; /*teksti värv*/
+}
+
+header h1{
+    padding: 5%;
+    font-variant: small-caps;
+    border-radius: 10px;
+}
+header{
+    background-color: lightgray; /*tausta värv*/
+    background-image: url("Nimetu.png");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+footer{
+    padding: 5%;
+    background-color: lightgray; /*tausta värv*/
+    font-variant: small-caps;
+    border-radius: 10px;
+}
+
+section, img{
+    border: 1px solid black;
+    width: 25%;
+    margin: 5px;
+    padding: 1%;
+    border-radius: 10px 40px 10px 40px;
+    text-align: center;
+}
+/*-----NAV-----*/
+nav ul{
+    list-style-type: none; /*töpp võitab ära*/
+    margin: 0;
+    padding: 2%;
+    background-color: lightgray;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+nav ul li{
+    float: left;
+}
+
+nav ul li a{
+    display: block;
+    color: cornflowerblue;
+    text-decoration: none; /*alljoone on kustutatud*/
+    padding: 20px;
+    text-align: center;
+    border-left: 2px solid cornflowerblue;
+    border-right: 2px solid cornflowerblue;
+    border-radius: 30%;
+    font-variant: small-caps;
+}
+nav ul li a:hover{ /*link fookuses - hiir on peal*/
+    background-color: blue;
+
+}
+
+nav{
+    margin-left: 10px;
+    padding: 10px;
+}
+
+main {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+section#kast1, img{
+    border: 1px solid black;
+    width: 25%;
+    margin: 5px;
+    padding: 1%;
+    border-radius: 10px 40px 10px 40px;
+    text-align: center;
+}
+
+section#kast2, img{
+    border: 3px dotted black;
+    width: 25%;
+    margin: 5px;
+    padding: 1%;
+    border-radius: 10px 40px 10px 40px;
+    text-align: center;
+}
+section#kast3{
+    border: 2px dashed black;
+    width: 25%;
+    margin: 5px;
+    padding: 1%;
+    border-radius: 10px 40px 10px 40px;
+    text-align: center;
+}
+
