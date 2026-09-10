@@ -31,6 +31,14 @@ table#keeruline2 td{
     background-color: darkred;
 }
 
+table#iseseisevTooTabeliga{
+    text-align: center;
+    height: 200px;
+    width: 300px;
+    vertical-align: top;
+    border-collapse: collapse;
+}
+
 .nimia{
     background-color: blue;
 }
