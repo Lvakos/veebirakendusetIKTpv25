@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Map area kasutamine</h1>
+<img src="computer.jpg" alt="arvuti pilt" usemap="#arvuti">
+<map name="arvuti">
+    <area shape="circle" coords="440, 150, 40" href="https://www.transpordiamet.ee/teeilmajaamad-ja-kaamerad" alt="kaamera">
+    <!-- circle coords=(x,y, R) -->
+    <area shape="rect" coords="130, 65, 400, 262" href="monitor.html" alt="monitor">
+    <!-- rect coords="x, y, x1, y2" -->
+    <!-- kolmnurk - poly - tuleb võta kõik koordinadid vasakult parema -->
+    <area shape="poly" coords="508, 282, 487, 321, 548, 321" href="prygi.html" alt="">
+    <!-- Ülesanne, Lisa kokku 5-6 pildiala, mis linkivad teisele failile sama sisuga -->
+</map>
+<div>palun tee klick hiirega pildi peal!</div>
+<h2>Tuleb klikida silmad ja kõrvad</h2>
+<img src="tiger.jpg" alt="kass pilt" usemap="#kass">
+<map name="kass">
+    <area shape="circle" coords="258, 116, 25" href="https://en.wikipedia.org/wiki/Cat#Vision" alt="kasssilm">
+    <area shape="circle" coords="186, 113, 25" href="https://en.wikipedia.org/wiki/Cat#Vision" alt="kasssilm">
+    <area shape="poly" coords="308, 10, 305, 57, 271, 40" href="https://en.wikipedia.org/wiki/Cat#Hearing" alt="kasskõrvad">
+    <area shape="poly" coords="144, 6, 146, 53, 182, 37" href="https://en.wikipedia.org/wiki/Cat#Hearing" alt="kasskõrvad">
+</map>
+
+</body>
+</html>
