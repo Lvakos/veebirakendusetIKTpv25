@@ -31,7 +31,7 @@ table#keeruline2 td{
     background-color: darkred;
 }
 
-table#iseseisevTooTabeliga{
+table#iseseisevTooTabeliga, table#arvestustooTabeliga{
     text-align: center;
     height: 200px;
     width: 300px;
@@ -41,4 +41,53 @@ table#iseseisevTooTabeliga{
 
 .nimia{
     background-color: blue;
+}
+
+
+#arvestustooTabeliga tr:nth-child(1){
+    background-color: blue;
+}
+
+#arvestustooTabeliga tr:nth-child(2) td:nth-child(1){
+    background-color: red;
+}
+
+#arvestustooTabeliga tr:nth-child(2) td:nth-child(2){
+    background-color: yellow;
+}
+
+#arvestustooTabeliga tr:nth-child(2) td:nth-child(3){
+    background-color: green;
+}
+
+#arvestustooTabeliga tr:nth-child(2) td:nth-child(4){
+    background-color: brown;
+}
+
+#arvestustooTabeliga tr:nth-child(3) td:nth-child(1){
+    background-color: deeppink;
+}
+
+#arvestustooTabeliga tr:nth-child(3) td:nth-child(2){
+    background-color: deepskyblue;
+}
+
+#arvestustooTabeliga tr:nth-child(3) td:nth-child(3){
+    background-color: darkcyan;
+}
+
+#arvestustooTabeliga tr:nth-child(4) td:nth-child(1){
+    background-color: darkgoldenrod;
+}
+
+#arvestustooTabeliga tr:nth-child(4) td:nth-child(2){
+    background-color: blueviolet;
+}
+
+#arvestustooTabeliga tr:nth-child(5) td:nth-child(1){
+    background-color: cornflowerblue;
+}
+
+#arvestustooTabeliga tr:nth-child(6) td:nth-child(1){
+    background-color: firebrick;
 }
