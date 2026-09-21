@@ -138,3 +138,14 @@ section#muusika{
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
+
+#suurkastskin {
+    position: relative;
+}
+
+#suurkastskin > img:last-child {
+    position: absolute;
+    top: 100px;
+    right: 500px;
+    width: 400px;
+}
