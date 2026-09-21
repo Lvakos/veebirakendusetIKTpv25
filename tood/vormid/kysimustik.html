@@ -9,7 +9,7 @@
 <div>HTML vormid ja nupud</div>
 <form action="#">
     <!-- c + tab komentaar -->
-    <table style="border: 1px solid black;">
+    <table border="1">
         <tr>
 
             <td>
@@ -19,7 +19,8 @@
             <td>
                 <input type="text" id="nimi" placeholder="Maksimilian">
             </td>
-
+        </tr>
+        <tr>
             <td>
                 <label for="stiil">Vali meeldivaim muusikakastiil</label>
             </td>
@@ -34,7 +35,12 @@
                     <option value="metal">metal</option>
                 </select>
             </td>
+        </tr>
+        <tr>
             <!-- radionupp -->
+            <td>
+                Kuidas sa muusikat peamiselt kuulad?
+            </td>
             <td>
                 <br>
                 <input type="radio" name="platvorm" id="spotify">
@@ -46,8 +52,8 @@
                 <input type="radio" name="platvorm" id="vinüülplaat">
                 <label for="vinüülplaat">vinüülplaat</label>
             </td>
-
-            <!-- checkbox -->
+        </tr>
+        <tr><!-- checkbox -->
             <td colspan="2">
                 <fieldset>
                     <legend>Tee oma valikud - lemmik ansambel</legend>
@@ -64,7 +70,9 @@
                     <label for="thesmashingpumpkins">The Smashing Pumpkins</label>
                 </fieldset>
             </td>
-
+        </tr>
+        <!-- range -->
+        <tr>
             <td>
                 <label for="tund">
                     Mitu tundi päevas sa kuulad muusikat
@@ -72,11 +80,62 @@
             </td>
 
             <td>0<input type="range" id="tund" min="0" max="100" value="">24</td>
-
-            <td>
-
+        </tr>
+        <!-- värv -->
+        <tr>
+            <td colspan="2">
+                <label for="colorr">
+                    Milline värv teie lemmik ansamblis logo
+                </label>
+                <input type="color" id="colorr">
             </td>
         </tr>
+
+        <tr>
+            <td colspan="2">
+                <label for="emaili">
+                    Kirjuta teie lemmik ansambli email
+                </label>
+                <input type="email" id="emaili">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <label for="dates">
+                    Millal su lemmikbänd alustas?
+                </label>
+                <input type="date" id="dates">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <label for="logos">
+                    Lisa teie lemmikbänd logo
+                </label>
+                <input type="file" id="logos">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <label for="resets">
+                    Kustuta kõik kirjutatud andmed
+                </label>
+                <input type="reset" id="resets">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <label for="submits">
+                    Saada vorm
+                </label>
+                <input type="submit" id="submits">
+            </td>
+        </tr>
+
     </table>
     <br>
 </form>
