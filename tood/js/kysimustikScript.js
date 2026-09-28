@@ -14,7 +14,7 @@ function radioValik(){
     let raadio=document.getElementById("raadio");
     let vinyl = document.getElementById("vinüülplaat");
 
-    let valik1="";
+    let valik1;
     if(spotify.checked){
         valik1 = spotify.value;
     } else if(raadio.checked){
@@ -27,6 +27,26 @@ function radioValik(){
     vastus2.innerHTML = "Valik: " + valik1;
 
     return valik1;
+}
+
+function kuuladRadio(){
+    let vastus6 = document.getElementById("vastus6");
+    let jah = document.getElementById("jah");
+    let ei = document.getElementById("ei");
+
+    let valik6;
+
+    if (jah.checked) {
+        valik6 = jah.value;
+    } else if (ei.checked) {
+        valik6 = ei.value;
+    } else {
+        valik6 = "Palun tee oma valik!";
+    }
+
+    vastus6.innerHTML = "Valik: " + valik6;
+
+    return valik6;
 }
 
 function checkboxValik(){
@@ -59,12 +79,14 @@ function naitaKoike(){
     let stiil=selectvalik();
     let valik2 = checkboxValik();
     let tund = rangeValik();
+    let raadioValik = kuuladRadio();
 
     vastusKoik.innerHTML="Sinu nimi on: "+nimi+'<br>'+
     'Sinu lemmikud on : ' + valik2 + '<br>'+
     'Sa kasutad ' + valik + '<br>'+
     'Sa kuuled muusika '+tund+' tundi' + '<br>' +
-    'Sinu lemmik muusikastiil on: '+stiil;
+    'Sinu lemmik muusikastiil on: '+stiil+'<br>' +
+    'Raadio kuulamine: '+raadioValik;
 
 }
 function rangeValik(){
@@ -95,10 +117,12 @@ function puhasta(){
     let vastus3=document.getElementById("vastus3");
     let vastus4=document.getElementById("vastus4");
     let vastus5=document.getElementById("vastus5");
+    let vastus6=document.getElementById("vastus6");
     vastus1.innerHTML="";
     vastus2.innerHTML="";
     vastus3.innerHTML="";
     vastus4.innerHTML="";
     vastus5.innerHTML="";
+    vastus6.innerHTML="";
     vastusKoik.innerHTML="";
 }
