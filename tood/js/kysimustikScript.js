@@ -14,19 +14,19 @@ function radioValik(){
     let raadio=document.getElementById("raadio");
     let vinyl = document.getElementById("vinüülplaat");
 
-    let valik="";
+    let valik1="";
     if(spotify.checked){
-        valik = spotify.value;
+        valik1 = spotify.value;
     } else if(raadio.checked){
-        valik= raadio.value;
+        valik1= raadio.value;
     } else if(vinyl.checked){
-        valik= vinyl.value;
+        valik1= vinyl.value;
     } else{
-        valik="Palun tee oma valik!"
+        valik1="Palun tee oma valik!"
     }
-    vastus2.innerHTML = "Valik: " + valik;
+    vastus2.innerHTML = "Valik: " + valik1;
 
-    return valik;
+    return valik1;
 }
 
 function checkboxValik(){
