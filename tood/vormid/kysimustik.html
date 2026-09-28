@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Muusika küsimustik</title>
     <link rel="stylesheet" href="vormStyle.css">
+    <script src="../js/kysimustikScript.js"></script>
 </head>
 <body>
 <h1>Muusika küsimustik</h1>
@@ -18,7 +19,10 @@
                 <label for="nimi">Nimi:</label>
             </td>   <!-- Tekstcast -->
             <td>
-                <input type="text" id="nimi" placeholder="Maksimilian">
+                <input type="text" id="nimi" placeholder="Maksimilian" oninput="nimiLugemineKastist()">
+            </td>
+            <td>
+                <div id="vastus1">Sisestatud nimi on: </div>
             </td>
         </tr>
         <tr>
@@ -27,7 +31,7 @@
             </td>
             <!-- ripploend või rippmenüü (выпадающий список) -->
             <td>
-                <select name="stiil" id="stiil">
+                <select name="stiil" id="stiil" onchange="selectvalik()">
                     <option value="vali">vali...</option>
                     <option value="Hiphop">Hiphop</option>
                     <option value="kantri">kantri</option>
@@ -35,6 +39,9 @@
                     <option value="funk">funk</option>
                     <option value="metal">metal</option>
                 </select>
+            </td>
+            <td>
+                <div id="vastus5"></div>
             </td>
         </tr>
         <tr>
@@ -44,32 +51,38 @@
             </td>
             <td>
                 <br>
-                <input type="radio" name="platvorm" id="spotify">
+                <input type="radio" name="platvorm" id="spotify" value="spotify" onclick="radioValik()">
                 <label for="spotify">Spotify</label>
                 <br>
-                <input type="radio" name="platvorm" id="raadio">
+                <input type="radio" name="platvorm" id="raadio" value="raadio" onclick="radioValik()">
                 <label for="raadio">raadio</label>
                 <br>
-                <input type="radio" name="platvorm" id="vinüülplaat">
+                <input type="radio" name="platvorm" id="vinüülplaat" value="vinüülplaat" onclick="radioValik()">
                 <label for="vinüülplaat">vinüülplaat</label>
+            </td>
+            <td>
+                <div id="vastus2"></div>
             </td>
         </tr>
         <tr><!-- checkbox -->
-            <td colspan="2">
+            <td>
                 <fieldset>
                     <legend>Tee oma valikud - lemmik ansambel</legend>
-                    <input type="checkbox" name="lemmikud" id="Radiohead">
-                    <label for="Radiohead">Radiohead</label>
+                    <input type="checkbox" name="lemmikud" id="radiohead" value="Radiohead" onchange="checkboxValik()">
+                    <label for="radiohead">Radiohead</label>
                     <br>
-                    <input type="checkbox" name="lemmikud" id="rollingstones">
+                    <input type="checkbox" name="lemmikud" id="rollingstones" value="Rolling Stones" onchange="checkboxValik()">
                     <label for="rollingstones">Rolling Stones</label>
                     <br>
-                    <input type="checkbox" name="lemmikud" id="thesmiths">
+                    <input type="checkbox" name="lemmikud" id="thesmiths" value="The Smiths" onchange="checkboxValik()">
                     <label for="thesmiths">The Smiths</label>
                     <br>
-                    <input type="checkbox" name="lemmikud" id="thesmashingpumpkins">
+                    <input type="checkbox" name="lemmikud" id="thesmashingpumpkins" value="The Smashing Pumpkins" onchange="checkboxValik()">
                     <label for="thesmashingpumpkins">The Smashing Pumpkins</label>
                 </fieldset>
+            </td>
+            <td>
+                <div id="vastus3"></div>
             </td>
         </tr>
         <!-- range -->
@@ -80,7 +93,10 @@
                 </label>
             </td>
 
-            <td>0<input type="range" id="tund" min="0" max="100" value="50">24</td>
+            <td>0<input type="range" id="tund" min="0" max="24" value="12" onchange="rangeValik()">24</td>
+            <td>
+                <div id="vastus4"></div>
+            </td>
         </tr>
         <!-- värv -->
         <tr>
@@ -138,7 +154,7 @@
                 </label>
             </td>
             <td colspan="2">
-                <input type="reset" id="resets">
+                <input type="reset" id="resets" onclick= "puhasta()">
             </td>
         </tr>
 
@@ -150,7 +166,14 @@
                 </label>
             </td>
             <td colspan="2">
-                <input type="submit" id="submits">
+                <input type="button" id="submits" value = "Kuva kõik" onclick = "naitaKoike()">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <div>
+                    <div id="vastusKoik"></div>
+                </div>
             </td>
         </tr>
 
