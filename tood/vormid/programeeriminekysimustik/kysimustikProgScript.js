@@ -1,3 +1,4 @@
+/*Milliseid programmeerimiskeeli sa tead?*/
 function teadmisedCheck() {
     let vastus1=document.getElementById("vastus1");
     let csharp=document.getElementById("csharp");
@@ -21,6 +22,7 @@ function teadmisedCheck() {
     return valik2;
 }
 
+/*Mida arvad programmeerimise õppimisest?*/
 function arvamuss(){
     let vastus1 = document.getElementById("vastus2");
     let arvamus=document.getElementById("arvamus");
@@ -36,6 +38,7 @@ function arvamuss(){
     return arvamus.value;
 }
 
+/*Mitu tundi nädalas tegeled programmeerimisega?*/
 function rangeValik(){
     let vastus4=document.getElementById("vastus3");
     let tund = document.getElementById("tund");
@@ -46,6 +49,7 @@ function rangeValik(){
     return tund.value;
 }
 
+/*Kas sulle meeldib programmeerida?*/
 function meeldib(){
     let vastus4 = document.getElementById("vastus4");
     let piltVastus = document.getElementById("piltVastus");
@@ -69,6 +73,7 @@ function meeldib(){
     return valik6;
 }
 
+/*Milliseid programmeerimisega seotud tööriistu oskad nimetada?*/
 function arvamus2(){
     let vastus5 = document.getElementById("vastus5");
     let progTooristu=document.getElementById("progTooristu");
@@ -79,6 +84,7 @@ function arvamus2(){
     return progTooristu.value;
 }
 
+/*Millist programmeerimiskeelt sooviksid kõige rohkem õppida?*/
 function soovitusOpi(){
     let vastus6 = document.getElementById("vastus6");
     let soovitus=document.getElementById("soovitus");
@@ -95,6 +101,7 @@ function soovitusOpi(){
     return valik;
 }
 
+/*Saada*/
 function naitaKoikee(){
     let vastusKoikk = document.getElementById("vastusKoikk");
     let teadmised = teadmisedCheck();
@@ -113,6 +120,7 @@ function naitaKoikee(){
 
 }
 
+/*Puhasta*/
 function puhastaa(){
     let vastusKoik = document.getElementById("vastusKoikk");
     let vastus1=document.getElementById("vastus1");

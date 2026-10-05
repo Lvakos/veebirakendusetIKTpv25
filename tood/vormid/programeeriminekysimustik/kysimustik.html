@@ -15,8 +15,8 @@
       <td><strong>Küsimus</strong></td>
       <td colspan="2"><strong>Vastus</strong></td>
     </tr>
-
-    <tr><!-- checkbox -->
+    <!--Milliseid programmeerimiskeeli sa tead?-->
+    <tr>
       <td>
         <fieldset>
           <legend>Milliseid programmeerimiskeeli sa tead?</legend>
@@ -38,11 +38,11 @@
       </td>
     </tr>
 
+    <!--Mida arvad programmeerimise õppimisest?-->
     <tr>
       <td>
-        <!-- Tekstcast -->
         <label for="arvamus">Mida arvad programmeerimise õppimisest?</label>
-      </td>   <!-- Tekstcast -->
+      </td>
       <td>
         <input type="text" id="arvamus" placeholder="Ma arvan et.." oninput="arvamuss()">
       </td>
@@ -51,6 +51,7 @@
       </td>
     </tr>
 
+    <!--Mitu tundi nädalas tegeled programmeerimisega?-->
     <tr>
       <td>
         <label for="tund">
@@ -64,6 +65,7 @@
       </td>
     </tr>
 
+    <!--Kas sulle meeldib programmeerida?-->
     <tr>
       <td>
         Kas sulle meeldib programmeerida?
@@ -84,11 +86,11 @@
       </td>
     </tr>
 
+    <!--Milliseid programmeerimisega seotud tööriistu oskad nimetada?-->
     <tr>
       <td>
-        <!-- Tekstcast -->
         <label for="progTooristu">Mida arvad programmeerimise õppimisest?</label>
-      </td>   <!-- Tekstcast -->
+      </td>
       <td>
         <input type="text" id="progTooristu" placeholder="Ma arvan et.." oninput="arvamus2()">
       </td>
@@ -97,11 +99,11 @@
       </td>
     </tr>
 
+    <!--Millist programmeerimiskeelt sooviksid kõige rohkem õppida?-->
     <tr>
       <td>
         <label for="soovitus">Millist programmeerimiskeelt sooviksid kõige rohkem õppida?</label>
       </td>
-      <!-- ripploend või rippmenüü (выпадающий список) -->
       <td>
         <select name="progSoovitus" id="soovitus" onchange="soovitusOpi()">
           <option value="vali">vali...</option>
@@ -118,6 +120,7 @@
       </td>
     </tr>
 
+    <!--Puhasta-->
     <tr>
       <td>
         <label for="resets">
@@ -129,7 +132,7 @@
       </td>
     </tr>
 
-    <!-- submit vorm -->
+    <!--Saada-->
     <tr>
       <td>
         <label for="submits">
@@ -137,13 +140,13 @@
         </label>
       </td>
       <td colspan="2">
-        <input type="button" id="submits" value = "Kuva kõik" onclick = "naitaKoikee()">
+        <input type="button" id="submits" value = "Saada" onclick = "naitaKoikee()">
       </td>
     </tr>
     <tr>
       <td colspan="3">
         <div>
-          <div id="vastusKoikk" style="background-color: greenyellow">Siin kuvab kõik vastused (klõps "Kuva Kõik")</div>
+          <div id="vastusKoikk" style="background-color: greenyellow">Siin kuvab kõik vastused (klõps "Saada")</div>
         </div>
       </td>
     </tr>
