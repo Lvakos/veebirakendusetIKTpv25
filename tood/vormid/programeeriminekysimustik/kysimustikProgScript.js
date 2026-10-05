@@ -129,11 +129,13 @@ function puhastaa(){
     let vastus4=document.getElementById("vastus4");
     let vastus5=document.getElementById("vastus5");
     let vastus6=document.getElementById("vastus6");
+    let piltVastus=document.getElementById("piltVastus");
     vastus1.innerHTML="Sa tead: ";
     vastus2.innerHTML="Sinu arvamus: ";
     vastus3.innerHTML="Sa tegeled programmeerimisega: ";
     vastus4.innerHTML="";
     vastus5.innerHTML="Sinu arvamus: ";
     vastus6.innerHTML="Sinu valik: ";
+    piltVastus.src = "../../photos/neutral.png"
     vastusKoik.innerHTML="";
 }
