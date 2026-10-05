@@ -17,14 +17,16 @@ function radioValik(){
     let valik1;
     if(spotify.checked){
         valik1 = spotify.value;
+        vastus2.src = "../photos/kysimustik/spotify.png";
     } else if(raadio.checked){
         valik1= raadio.value;
+        vastus2.src = "../photos/kysimustik/raadio.png";
     } else if(vinyl.checked){
         valik1= vinyl.value;
+        vastus2.src = "../photos/kysimustik/vinuulplaat.png";
     } else{
         valik1="Palun tee oma valik!"
     }
-    vastus2.innerHTML = "Valik: " + valik1;
 
     return valik1;
 }
@@ -98,17 +100,35 @@ function rangeValik(){
     return tund.value;
 }
 
-function selectvalik(){
-    let vastus5=document.getElementById("vastus5");
+function selectvalik() {
+    let vastus5 = document.getElementById("vastus5");
     let stiil = document.getElementById("stiil");
 
-    if(stiil.selectedIndex !== 0){
-        vastus5.innerHTML="Sa valisid " + stiil.value;
-    } else{
-        vastus5.innerHTML="Palun tee oma valik";
+    if (stiil.value !== "vali") {
+        vastus5.src = stiil.value;
+        if (stiil.value === "hiphop"){
+            vastus5.src = "../photos/kysimustik/hiphop.png";
+        }
+        else if (stiil.value === "kantri"){
+            vastus5.src = "../photos/kysimustik/kantri.png";
+        }
+        else if (stiil.value === "rock"){
+            vastus5.src = "../photos/kysimustik/rock.png";
+        }
+        else if (stiil.value === "funk"){
+            vastus5.src = "../photos/kysimustik/funk.jpg";
+        }
+        else if (stiil.value === "metal"){
+            vastus5.src = "../photos/kysimustik/metal.png";
+        }
+        else{
+            vastus5.src = "";
+        }
     }
+
     return stiil.value;
 }
+
 
 function puhasta(){
     let vastusKoik = document.getElementById("vastusKoik");

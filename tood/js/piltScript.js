@@ -35,8 +35,7 @@ function radioValik() {
     for (let i = 0; i < piltValik.length; i++) {
         if (piltValik[i].checked) {
             valitudPilt.src = piltValik[i].value;
-        } else{
-            //alert ('tee oma valiku')
+            break;
         }
     }
 }
