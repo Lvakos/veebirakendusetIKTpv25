@@ -5,6 +5,7 @@
     <title>Kalkulaatorid</title>
     <link rel="stylesheet" href="kalkStyle.css">
     <script src="kalk1Script.js"></script>
+    <script src="kalk2Script.js"></script>
 </head>
 <body>
 <h1>Kalkulaatorid</h1>
@@ -27,7 +28,7 @@
     <section id="kalk2">
         <h2>Joogi kalkulaator</h2>
         <label for="kogus"> Mitu tk soovid: </label>
-        <input type="number" id="kogus" min="1" max="100" step="1" value="10">
+        <input type="number" id="kogus" min="1" max="100" step="1" value="10" onchange ="jookideValik()">
         <label for="joogiValik">Vali lemmikjook:</label>
         <select name="joogiValik" id="joogiValik">
             <option value="">vali</option>
@@ -38,7 +39,7 @@
         </select>
         <div id="vastus2">Vastus</div>
     </section>
-    <section id="kalk3">kalk3</section>
+    <section id="kalk3">MOODLE ÜL3</section>
 </section>
 </body>
 </html>
