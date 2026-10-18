@@ -17,6 +17,17 @@ section#kalk2 {
     width: 30%;
     padding: 1%;
 }
+section#kalk3 {
+    border: 5pt solid red;
+    background-color: darkred;
+    border-radius: 10px;
+    width: 30%;
+    padding: 1%;
+}
+
+#img1 {
+    height: 15vh;
+}
 
 #img {
     height: 15vh;

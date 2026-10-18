@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="kalkStyle.css">
     <script src="kalk1Script.js"></script>
     <script src="kalk2Script.js"></script>
+    <script src="kalk3Script.js"></script>
 </head>
 <body>
 <h1>Kalkulaatorid</h1>
 <section id = "yld">
-    <!-- css paigutus flex row -->
     <section id="kalk1">
         <h2>meetri/tolli kalkulaator</h2>
         <label for="arv">Sisesta arv</label>
@@ -39,7 +39,24 @@
         </select>
         <div id="vastus2">Vastus</div>
     </section>
-    <section id="kalk3">MOODLE ÜL3</section>
+    <section id="kalk3">
+        <h2>Kütusekulu kalkulaator</h2>
+        <label for="km"> Mitu km sa sõitsid: </label>
+        <input type="text" id="km" placeholder="nt 150" oninput="kytuseArvutus()">
+        <br>
+        <label for="kulu"> Kütusekulu (l/100 km): </label>
+        <input type="text" id="kulu" placeholder="nt 7" oninput="kytuseArvutus()">
+        <br>
+        <label for="kytusValik">Vali kütus:</label>
+        <select name="kytusValik" id="kytusValik" onchange="kytuseArvutus()">
+            <option value="">vali</option>
+            <option value="bensiin95">bensiin 95</option>
+            <option value="bensiin98">bensiin 98</option>
+            <option value="diisel">diisel</option>
+        </select>
+        <div id="vastus3">Vastus</div>
+        <img id="img1" src="" alt="pilt">
+    </section>
 </section>
 </body>
 </html>
