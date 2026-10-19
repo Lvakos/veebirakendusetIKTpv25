@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Objektid ja meetodid</title>
+    <script src="../../js/ObjektidJaMeetodid.js"></script>
+</head>
+<body>
+<h1>Raamat ja raamatukogu</h1>
+
+<h2>Raamat</h2>
+<input type="button" value="Raamatu kirjeldus" onclick="naitaKirjeldust()">
+<br>
+<input type="number" id="uusAasta" placeholder="Uus aasta">
+<input type="button" value="Muuda aastat" onclick="muudaAastat()">
+<div id="raamatVastus"></div>
+
+<h2>Raamatukogu</h2>
+<input type="button" value="Kõik raamatud" onclick="naitaRaamatud()">
+<input type="button" value="Koguarv" onclick="naitaKoguarv()">
+<input type="button" value="Pärast 2000" onclick="naitaParast2000()">
+<div id="raamatukoguVastus"></div>
+
+<h3>Lisa raamat</h3>
+<input type="text" id="pealkiri" placeholder="Pealkiri">
+<input type="text" id="autor" placeholder="Autor">
+<input type="number" id="aasta" placeholder="Aasta">
+<input type="button" value="Lisa" onclick="lisa()">
+<div id="lisaVastus"></div>
+
+<h3>Otsi autori järgi</h3>
+<input type="text" id="otsiAutor" placeholder="Autor">
+<input type="button" value="Otsi" onclick="otsi()">
+<div id="otsiVastus"></div>
+</body>
+</html>
