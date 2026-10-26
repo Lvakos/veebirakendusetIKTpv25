@@ -9,28 +9,28 @@
 <h1>Raamat ja raamatukogu</h1>
 
 <h2>Raamat</h2>
-<input type="button" value="Raamatu kirjeldus" onclick="naitaKirjeldust()">
+<input type="button" value="Raamatu kirjeldus" onclick="raamat.kirjeldus()">
 <br>
 <input type="number" id="uusAasta" placeholder="Uus aasta">
-<input type="button" value="Muuda aastat" onclick="muudaAastat()">
+<input type="button" value="Muuda aastat" onclick="raamat.muudaAasta()">
 <div id="raamatVastus"></div>
 
 <h2>Raamatukogu</h2>
-<input type="button" value="Kõik raamatud" onclick="naitaRaamatud()">
-<input type="button" value="Koguarv" onclick="naitaKoguarv()">
-<input type="button" value="Pärast 2000" onclick="naitaParast2000()">
+<input type="button" value="Kõik raamatud" onclick="raamatukogu.kuvaRaamatud()">
+<input type="button" value="Koguarv" onclick="raamatukogu.koguarv()">
+<input type="button" value="Pärast 2000" onclick="raamatukogu.parast2000()">
 <div id="raamatukoguVastus"></div>
 
 <h3>Lisa raamat</h3>
 <input type="text" id="pealkiri" placeholder="Pealkiri">
 <input type="text" id="autor" placeholder="Autor">
 <input type="number" id="aasta" placeholder="Aasta">
-<input type="button" value="Lisa" onclick="lisa()">
+<input type="button" value="Lisa" onclick="raamatukogu.lisaRaamat()">
 <div id="lisaVastus"></div>
 
 <h3>Otsi autori järgi</h3>
 <input type="text" id="otsiAutor" placeholder="Autor">
-<input type="button" value="Otsi" onclick="otsi()">
+<input type="button" value="Otsi" onclick="raamatukogu.otsiAutori()">
 <div id="otsiVastus"></div>
 </body>
 </html>
