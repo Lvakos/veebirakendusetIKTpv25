@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ee">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas joonistamine</title>
+    <link rel="stylesheet" href="canvasStyle.css">
+    <script src="canvasScript.js"></script>
+</head>
+<body>
+<h1>Joonistusrakendus Canvas +JS</h1>
+
+<canvas id="canvas" width="300" height="400"></canvas>
+<table>
+    <tr>
+        <td>
+            <input type="button" value="Puhasta" onclick="puhasta()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Joon" onclick="joon()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Kolmnurk" onclick="kolmnurk()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Ristkülik" onclick="riskylik()">
+            <label for="Laius">Laius:</label>
+            <input type="number" id="Laius" min="1" max="50" step="2" onchange="riskylik()">
+            <label for="kyrgus">Kõrgus:</label>
+            <input type="number" id="kyrgus" min="1" max="50" step="2" onchange="riskylik()">
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Ring" onclick="ring()">
+            <label for="raadius">Raadius:</label>
+            <input type="number" id="raadius" min="1" max="50" step="2" onchange="ring()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Pilt" onclick="pilt()">
+        </td>
+    </tr>
+</table>
+<table id="table2">
+    <tr>
+        <td>
+            <input type="button" value="Ratas" onclick="ratas()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Kere" onclick="kere()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Tuled" onclick="tuled()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Aur" onclick="aur()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Kuva kõik" onclick="koik()">
+        </td>
+    </tr>
+</table>
+<canvas id="canvas2" width="400" height="400"></canvas>
+</body>
+</html>

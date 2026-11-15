@@ -1,0 +1,25 @@
+canvas#canvas {
+    background-color: red;
+    border: 1px solid darkred;
+    border-radius: 5px;
+    width: 400pt;
+    height: 400pt;
+}
+table{
+    position: absolute;
+    left: 420pt;
+    top: 50pt;
+}
+canvas#canvas2 {
+    position: absolute;
+    left: 720pt;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 400pt;
+    height: 400pt;
+}
+table#table2 {
+    position: absolute;
+    top: 200pt;
+}
