@@ -102,22 +102,46 @@ function soovitusOpi(){
 }
 
 /*Saada*/
-function naitaKoikee(){
-    let vastusKoikk = document.getElementById("vastusKoikk");
-    let teadmised = teadmisedCheck();
-    let arvamus = arvamuss();
-    let rangevalik = rangeValik();
-    let meeldibb = meeldib();
-    let arvamus22 = arvamus2();
-    let soovitus = soovitusOpi();
+function naitaKoikee() {
+    let tulemusDiv = $('#vastusKoikk');
+    let valid = true;
 
-    vastusKoikk.innerHTML="Sa tead: "+teadmised+'<br>'+
-        'Sinu arvamus : ' + arvamus + '<br>'+
-        'Sa ' + meeldibb + '<br>'+
-        'Sa tegeled programmeerimisega '+rangevalik+' tundi' + '<br>' +
-        'Sa oskad: '+arvamus22+' tooristad <br>' +
-        'Sa soovid kõige rohkem õppida: '+soovitus;
+    let checkedCount = $('input[name="lemmikud"]:checked').length;
+    if (checkedCount === 0) {
+        tulemusDiv.css('color', 'red');
+        tulemusDiv.html("Viga: Palun vali vähemalt üks programmeerimiskeel!");
+        valid = false;
+        return;
+    }
 
+    let arvamusVal = $('#arvamus').val().trim();
+    if (arvamusVal === "") {
+        tulemusDiv.css('color', 'red');
+        tulemusDiv.html("Viga: Palun täida lahter 'Mida arvad programmeerimise õppimisest?'!");
+        $('#arvamus').focus();
+        valid = false;
+        return;
+    }
+
+    if (valid) {
+        tulemusDiv.css('color', 'black');
+
+        let teadmised = teadmisedCheck();
+        let arvamus = arvamuss();
+        let rangevalik = rangeValik();
+        let meeldibb = meeldib();
+        let arvamus22 = arvamus2();
+        let soovitus = soovitusOpi();
+
+        tulemusDiv.html(
+            "Sa tead: " + teadmised + '<br>' +
+            'Sinu arvamus : ' + arvamus + '<br>' +
+            'Sa ' + meeldibb + '<br>' +
+            'Sa tegeled programmeerimisega ' + rangevalik + ' tundi' + '<br>' +
+            'Sa oskad: ' + arvamus22 + ' tooristad <br>' +
+            'Sa soovid kõige rohkem õppida: ' + soovitus
+        );
+    }
 }
 
 /*Puhasta*/

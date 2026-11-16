@@ -1,4 +1,5 @@
 body {
+    opacity: 0;
     margin: 0;
     padding: 0;
 }
@@ -83,6 +84,8 @@ main {
 }
 
 section#kast1{
+    position: relative;
+    left:0;
     border: 1px solid black;
     background-color: lightblue;
     width: 25%;
@@ -93,6 +96,8 @@ section#kast1{
 }
 
 section#kast2{
+    position: relative;
+    left:0;
     border: 3px dotted black;
     width: 25%;
     background-color: lightblue;
@@ -102,6 +107,8 @@ section#kast2{
     text-align: center;
 }
 section#kast3{
+    position: relative;
+    left:0;
     border: 2px dashed black;
     width: 25%;
     background-color: lightblue;

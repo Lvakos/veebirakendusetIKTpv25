@@ -5,8 +5,43 @@
     <meta charset="UTF-8">
     <title>Puhtejev veebirakenduste aluste tööd</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+            integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
+            crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#kuva').hide();
+            //nupu peida vajutamine
+            $('#peida').click(function() {
+                $('section').hide(500)
+                $(this).hide();
+                $('#kuva').fadeToggle(400);
+            })
+
+            $('#kuva').click(function() {
+                $('section').show(500)
+                $(this).hide();
+                $('#peida').fadeToggle(400);
+            })
+        })
+        function start(){
+            $('body').fadeTo(1000, 1);
+            $('#kast3').draggable();
+            $('#kast3').bind("drag", xyKoordinat);
+        }
+
+        function xyKoordinat(event, ui){
+            let koht=ui.offset;
+            $('#vastus').html('Koordinatid: x: '+koht.left+ 'y: '+koht.top);
+        }
+    </script>
 </head>
-<body>
+<body onload="start()">
 
 <!--veebilehe sisu-->
 
@@ -40,6 +75,32 @@
 
 <!--Põhisisu-->
 <main>
+    <div>
+        *Lohistav lõik "Baby"*
+        <br>
+        *Animeeritud esimene kaks lõikud (vajuta nupp "--->" et liiguta nende paremale ja "<---" et vasakule)*
+        <br>
+        *Peida ja Kuva nuppud. Vajuta "Peida" et peida kõik lõikud, ja "Kuva" et kuvada nende.*
+        <br>
+        <strong>Oma efektid</strong>
+        <br>
+        *Lisan sujuvalt ilmuv veebilehel, kasutamisega .fadeTo(1000, 1)*
+        <br>
+        Nupud ilmuvad nüüd vajutamisel sujuvalt, kasutamisega .fadeToggle(400) .show() asemel
+
+    </div>
+    <input type="button" value="--->" id="paremale"
+           onclick="$('#kast1, #kast2').animate({left: '500px'}, 1000);
+    $(this).hide();
+    $('#vasakule').fadeToggle(400);">
+
+    <input type="button" value="<---" id="vasakule" style="display:none"
+           onclick="$('#kast1, #kast2').animate({left: '0px'}, 1000);
+    $(this).hide();
+    $('#paremale').fadeToggle(400);">
+
+    <input type="button" value="Peida" id="peida">
+    <input type="button" value="Kuva" id="kuva">
     <section id="kast1">
         <h2>
             Tere tulemast!
@@ -60,6 +121,9 @@
             <img src="PxiU6zD.jpeg" alt="see on ise tehtud pilt;" style="width:200px;height:200px;">
         </div>
 
+    </section>
+    <section>
+        <div id="vastus"></div>
     </section>
 </main>
 
