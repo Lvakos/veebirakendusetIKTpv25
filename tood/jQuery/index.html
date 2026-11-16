@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery kasutamine</title>
+    <link rel="stylesheet" href="queryStyle.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+          $('#kuva').hide();
+          //nupu peida vajutamine
+             $('#peida').click(function() {
+                 $('#sisu').hide(500)
+                 $(this).hide();
+                 $('#kuva').show();
+             })
+
+            $('#kuva').click(function() {
+                $('#sisu').show(500)
+                $(this).hide();
+                $('#peida').show();
+            })
+        })
+        function start(){
+            $('#sisu').draggable();
+            $('#pilt').draggable();
+            $('#pilt').bind("drag", xyKoordinat);
+        }
+
+        function xyKoordinat(event, ui){
+            let koht=ui.offset;
+             $('#vastus').html('x: '+koht.left+ 'y: '+koht.top);
+        }
+    </script>
+</head>
+<body onload="start()">
+<header>
+    <h1>jQuery kasutamine</h1>
+</header>
+<main>
+    <input type="button" value="--->" id="paremale"
+    onclick="$('#sisu, h2, img').animate({left: '500px'}, 1000);
+    $(this).hide();
+    $('#vasakule').show();">
+
+    <input type="button" value="<---" id="vasakule" style="display:none"
+           onclick="$('#sisu, h2, img').animate({left: '0px'}, 1000);
+    $(this).hide();
+    $('#paremale').show();">
+
+    <input type="button" value="Peida" id="peida">
+    <input type="button" value="Kuva" id="kuva">
+    <section>
+        <h2>$( document ).ready()</h2>
+        <div id="sisu">
+            A page can't be manipulated safely until the document is "ready." jQuery detects this state of readiness for you. Code included inside $( document ).ready() will only run once the page Document Object Model (DOM) is ready for JavaScript code to execute. Code included inside $( window ).on( "load", function() { ... }) will run once the entire page (images or iframes), not just the DOM, is ready.
+        </div>
+    </section>
+    <section>
+        <div id="vastus"></div>
+        <img src="https://images.pexels.com/photos/26424765/pexels-photo-26424765/free-photo-of-anonymous-neon-mask-wallpaper.jpeg" alt="" id="pilt">
+    </section>
+</main>
+
+</body>
+</html>
