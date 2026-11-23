@@ -94,12 +94,13 @@
 <main>
 
     <section>
+        <h2>jQuery tööd</h2>
         <div class="vihjemull" title="jQuery raamistikuga seotud tööd on lõpetatud.">
             *Lohistav lõik "Baby"*
             <br>
 
             <br>
-            *Animeeritud esimene kaks lõikud (vajuta nupp "--->" et liiguta nende paremale ja "<---" et vasakule)*
+            *Animeeritud esimene kaks lõikud (vajuta nupp "--->" et liiguta nende paremale ja "&lt;---" et vasakule)*
             <br>
 
             <br>
@@ -123,7 +124,7 @@
     $(this).hide();
     $('#vasakule').fadeToggle(400);">
 
-    <input type="button" value="<---" id="vasakule" style="display:none"
+    <input type="button" value="&lt;---" id="vasakule" style="display:none"
            onclick="$('#kast1, #kast2').animate({left: '0px'}, 1000);
     $(this).hide();
     $('#paremale').fadeToggle(400);">
@@ -152,6 +153,7 @@
 
     </section>
     <section>
+        <h2>Koordinaadid</h2>
         <div id="vastus"></div>
     </section>
 </main>
