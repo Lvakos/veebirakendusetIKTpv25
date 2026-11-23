@@ -14,6 +14,21 @@
             crossorigin="anonymous"></script>
 
     <script>
+
+        $(function() {
+            $('.vihjemull').mouseover(function(e) {
+                var mull = $(this).attr('title');
+                $(this).attr('title','');
+                $(this).append('<div id="vihje">' + mull + '</div>');
+                $('#vihje').hide().fadeIn(200);
+            }).mousemove(function(e) {
+                $('#vihje').css('top', e.pageY + 10 );
+                $('#vihje').css('left', e.pageX + 20 );
+            }).mouseout(function() {
+                $(this).attr('title',$('#vihje').html());
+                $(this).children('div#vihje').remove();
+            });
+        });
         $(document).ready(function() {
             $('#kuva').hide();
             //nupu peida vajutamine
@@ -40,20 +55,7 @@
             $('#vastus').html('Koordinatid: x: '+koht.left+ 'y: '+koht.top);
         }
 
-        $(function() {
-            $('.vihjemull').mouseover(function(e) {
-                var mull = $(this).attr('title');
-                $(this).attr('title','');
-                $(this).append('<div id="vihje">' + mull + '</div>');
-                $('#vihje').hide().fadeIn(200);
-            }).mousemove(function(e) {
-                $('#vihje').css('top', e.pageY + 10 );
-                $('#vihje').css('left', e.pageX + 20 );
-            }).mouseout(function() {
-                $(this).attr('title',$('#vihje').html());
-                $(this).children('div#vihje').remove();
-            });
-        });
+
     </script>
 </head>
 <body onload="start()">
@@ -61,23 +63,23 @@
 <!--veebilehe sisu-->
 
 <!--Päis-->
-<header>
+<header class="vihjemull" title="Veebilehe päis.">
     <h1>
         Puhtejev veebirakenduste aluste tööd
     </h1>
 </header>
 
 <!--navigeerimismenüü-->
-<nav>
+<nav class="vihjemull" title="Navigeerimismenüü.">
     <ul>
         <li>
             <a href="index.html" class="vihjemull" title="Pealeht, millele satud saiti külastades.">Kodu</a>
         </li>
         <li>
-            <a href="tutvustus.html" class="vihjemull" title="Sellelt lehelt leiate teavet minu kohta.">Tutvustus</a>
+            <a href="tutvustus.html">Tutvustus</a>
         </li>
         <li>
-            <a href="lingid.html" class="vihjemull" title="Kasulikud lingid erinevatele tööriistadele, samuti sõnavara.">Kasulikud lingid</a>
+            <a href="lingid.html">Kasulikud lingid</a>
         </li>
         <li>
             <a href="tood.html" class="vihjemull" title="Kogu töö, mida olen teinud.">Tehtud tööd</a>
@@ -92,7 +94,7 @@
 <main>
 
     <section>
-        <div>
+        <div class="vihjemull" title="jQuery raamistikuga seotud tööd on lõpetatud.">
             *Lohistav lõik "Baby"*
             <br>
 
@@ -155,7 +157,7 @@
 </main>
 
 <!--Jalus-->
-<footer>
+<footer class="vihjemull" title="Lehe jalus.">
     Maksimilian Puhtejev &copy; 2026
 </footer>
 
