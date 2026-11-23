@@ -11,10 +11,19 @@
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
             integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
             crossorigin="anonymous"></script>
-    <script>
+    <script type="text/javascript">
         function start(){
             $('body').fadeTo(1000, 1);
         }
+
+        $(function(){
+            $('a').hover(function(event){
+                    $(this).addClass('hover');
+                },
+                function(){
+                    $(this).removeClass('hover');
+                });
+        });
     </script>
 </head>
 <body onload="start()">
@@ -40,8 +49,14 @@
         <li>
             <a href="lingid.html">Kasulikud lingid</a>
         </li>
-        <li>
-            <a href="tood.html">Tehtud tööd</a>
+        <li><a id="toodteh" href="#">Tehtud Tööd</a>
+            <ul>
+                <li><a href="kujundus2/index.html">Teine veebilehe kujundus</a></li>
+                <li><a href="tood/vormid/programeeriminekysimustik/kysimustik.html">Prog. Küsimustik</a></li>
+                <li><a href="tood/tabelid.html">Tabelid</a></li>
+
+
+            </ul>
         </li>
         <li>
             <a href="meedia.html">Meedia</a>

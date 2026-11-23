@@ -39,6 +39,21 @@
             let koht=ui.offset;
             $('#vastus').html('Koordinatid: x: '+koht.left+ 'y: '+koht.top);
         }
+
+        $(function() {
+            $('.vihjemull').mouseover(function(e) {
+                var mull = $(this).attr('title');
+                $(this).attr('title','');
+                $(this).append('<div id="vihje">' + mull + '</div>');
+                $('#vihje').hide().fadeIn(200);
+            }).mousemove(function(e) {
+                $('#vihje').css('top', e.pageY + 10 );
+                $('#vihje').css('left', e.pageX + 20 );
+            }).mouseout(function() {
+                $(this).attr('title',$('#vihje').html());
+                $(this).children('div#vihje').remove();
+            });
+        });
     </script>
 </head>
 <body onload="start()">
@@ -56,39 +71,51 @@
 <nav>
     <ul>
         <li>
-            <a href="index.html">Kodu</a>
+            <a href="index.html" class="vihjemull" title="Pealeht, millele satud saiti külastades.">Kodu</a>
         </li>
         <li>
-            <a href="tutvustus.html">Tutvustus</a>
+            <a href="tutvustus.html" class="vihjemull" title="Sellelt lehelt leiate teavet minu kohta.">Tutvustus</a>
         </li>
         <li>
-            <a href="lingid.html">Kasulikud lingid</a>
+            <a href="lingid.html" class="vihjemull" title="Kasulikud lingid erinevatele tööriistadele, samuti sõnavara.">Kasulikud lingid</a>
         </li>
         <li>
-            <a href="tood.html">Tehtud tööd</a>
+            <a href="tood.html" class="vihjemull" title="Kogu töö, mida olen teinud.">Tehtud tööd</a>
         </li>
         <li>
-            <a href="meedia.html">Meedia</a>
+            <a href="meedia.html" class="vihjemull" title="Leht piltide, videote, muusika ja kaardipunktiga.">Meedia</a>
         </li>
     </ul>
 </nav>
 
 <!--Põhisisu-->
 <main>
-    <div>
-        *Lohistav lõik "Baby"*
-        <br>
-        *Animeeritud esimene kaks lõikud (vajuta nupp "--->" et liiguta nende paremale ja "<---" et vasakule)*
-        <br>
-        *Peida ja Kuva nuppud. Vajuta "Peida" et peida kõik lõikud, ja "Kuva" et kuvada nende.*
-        <br>
-        <strong>Oma efektid</strong>
-        <br>
-        *Lisan sujuvalt ilmuv veebilehel, kasutamisega .fadeTo(1000, 1)*
-        <br>
-        Nupud ilmuvad nüüd vajutamisel sujuvalt, kasutamisega .fadeToggle(400) .show() asemel
 
-    </div>
+    <section>
+        <div>
+            *Lohistav lõik "Baby"*
+            <br>
+
+            <br>
+            *Animeeritud esimene kaks lõikud (vajuta nupp "--->" et liiguta nende paremale ja "<---" et vasakule)*
+            <br>
+
+            <br>
+            *Peida ja Kuva nuppud. Vajuta "Peida" et peida kõik lõikud, ja "Kuva" et kuvada nende.*
+            <br>
+
+            <br>
+            <strong>Oma efektid</strong>
+            <br>
+
+            <br>
+            *Lisan sujuvalt ilmuv veebilehel, kasutamisega .fadeTo(1000, 1)*
+            <br>
+
+            <br>
+            *Nupud ilmuvad nüüd vajutamisel sujuvalt, kasutamisega .fadeToggle(400) .show() asemel*
+        </div>
+    </section>
     <input type="button" value="--->" id="paremale"
            onclick="$('#kast1, #kast2').animate({left: '500px'}, 1000);
     $(this).hide();
